@@ -1,0 +1,9 @@
+require 'rubygems'
+require 'pushmeup'
+GCM.host = 'https://android.googleapis.com/gcm/send'
+GCM.format = :json
+GCM.key = "AIzaSyAmn-BA320pM5rUGaeqWCOaF4xgzyM9mTk"
+destination = ["APA91bE1Jr1Qy-HdW5v6NghBPxJQptTmB2cZU1WAadZgNQAL02sAXWlWexCODkn-gliKkvUpboRvOYQc91ELbCylfokE4zc8AgUJPud_QaT3jEg6q9OZ61Yn2V14Hd1jk2Jdtp7ffuFCwqlN8FZEpjh53W0UPaoFTomG6QdtHtwWPSOKepr16qs"]
+data = {:title => "New message", :message => "PhoneGap Build rocks!", :msgcnt => "2", :soundname => "beep.wav"}
+
+GCM.send_notification( destination, data)

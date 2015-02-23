@@ -181,11 +181,6 @@ public class PushPlugin extends CordovaPlugin {
 				}
 				else
 				{
-					// Maintain backwards compatibility
-					if (key.equals("message") || key.equals("msgcnt") || key.equals("soundname"))
-					{
-						json.put(key, value);
-					}
 
 					if ( value instanceof String ) {
 					// Try to figure out if the value is another JSON object
