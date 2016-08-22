@@ -1,4 +1,4 @@
-/*
+w/*
  Copyright 2009-2011 Urban Airship Inc. All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
@@ -218,7 +218,7 @@
         NSLog(@"Msg: %@", jsonStr);
 
         NSString * jsCallBack = [NSString stringWithFormat:@"%@(%@);", self.callback, jsonStr];
-        [self.webView stringByEvaluatingJavaScriptFromString:jsCallBack];
+        [(UIWebView*) self.webView stringByEvaluatingJavaScriptFromString:jsCallBack];
 
         self.notificationMessage = nil;
     }
